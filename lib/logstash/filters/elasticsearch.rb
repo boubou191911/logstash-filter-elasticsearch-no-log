@@ -97,7 +97,7 @@ class LogStash::Filters::Elasticsearch < LogStash::Filters::Base
       filter_matched(event)
     rescue => e
       @logger.warn("Failed to query elasticsearch for previous event",
-                   :query => query_str, :event => event, :error => e)
+                   :query => query_str, :error => e)
     end
   end # def filter
 end # class LogStash::Filters::Elasticsearch
