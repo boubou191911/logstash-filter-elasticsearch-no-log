@@ -28,7 +28,7 @@ require "base64"
 #          }
 #       }
 #
-class LogStash::Filters::Elasticsearch < LogStash::Filters::Base
+class LogStash::Filters::ElasticsearchNoLog < LogStash::Filters::Base
   config_name "elasticsearch"
 
   # List of elasticsearch hosts to use for querying.
@@ -100,4 +100,4 @@ class LogStash::Filters::Elasticsearch < LogStash::Filters::Base
                    :query => query_str, :error => e)
     end
   end # def filter
-end # class LogStash::Filters::Elasticsearch
+end # class LogStash::Filters::ElasticsearchNoLog
